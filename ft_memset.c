@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//NO ESTA ACABADO
 void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t	i;
