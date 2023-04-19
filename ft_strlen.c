@@ -6,25 +6,18 @@
 /*   By: inde-la- <inde-la-@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 16:04:32 by inde-la-          #+#    #+#             */
-/*   Updated: 2023/04/17 16:10:44 by inde-la-         ###   ########.fr       */
+/*   Updated: 2023/04/19 18:46:04 by inde-la-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	<unistd.h>
-#include	<stdio.h>
+#include "libft.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	len;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-int	main(void)
-{
-	printf("%i\n", ft_strlen("goe k"));
-	return (0);
+	len = 0;
+	while (s[len] != '\0')
+		len++;
+	return (len);
 }
