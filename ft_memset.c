@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inde-la- <inde-la-@student.42urduliz.co    +#+  +:+       +#+        */
+/*   By: inigo <inigo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 16:04:32 by inde-la-          #+#    #+#             */
-/*   Updated: 2023/04/19 21:10:09 by inde-la-         ###   ########.fr       */
+/*   Updated: 2023/04/22 19:28:56 by inigo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ void	*ft_memset(void *b, int c, size_t len)
 		i++;
 	}
 	i = 0;
-	return (str);
+	return (b); //no sé si &b
 }
