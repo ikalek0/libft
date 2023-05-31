@@ -6,7 +6,7 @@
 /*   By: inigo <inigo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 16:04:32 by inde-la-          #+#    #+#             */
-/*   Updated: 2023/04/22 19:28:56 by inigo            ###   ########.fr       */
+/*   Updated: 2023/04/26 15:09:29 by inigo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void	*ft_memset(void *b, int c, size_t len)
 	i = 0;
 	while (i < len)
 	{	
-		str[i] == c;
+		((unsigned char *)b)[i] = c;
 		i++;
 	}
 	i = 0;
-	return (b); //no sé si &b
+	return (b);
 }

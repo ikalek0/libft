@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: inde-la- <inde-la-@student.42.fr>                +#+  +:+       +#+         #
+#    By: inigo <inigo@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/22 17:39:07 by inigo             #+#    #+#              #
-#    Updated: 2023/04/22 17:39:40 by inigo            ###   ########.fr        #
+#    Updated: 2023/04/26 15:34:24 by inigo            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,6 @@ SRCS	= ft_isalpha.c \
 		  ft_isprint.c \
 		  ft_strlen.c \
 		  ft_strlcpy.c \
-		  ft_strlcat.c \
 		  ft_strchr.c \
 		  ft_strrchr.c \
 		  ft_strncmp.c \

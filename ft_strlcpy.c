@@ -6,15 +6,15 @@
 /*   By: inigo <inigo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 19:33:24 by inigo             #+#    #+#             */
-/*   Updated: 2023/04/22 19:45:15 by inigo            ###   ########.fr       */
+/*   Updated: 2023/04/26 13:58:40 by inigo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t  strlcpy(char * restrict dst, const char * restrict src, size_t dstsize)
+size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 {
-    size_t i;
+	size_t	i;
 
 	if (dstsize == 0)
 		return (ft_strlen(src));
