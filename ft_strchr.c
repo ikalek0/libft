@@ -6,7 +6,7 @@
 /*   By: inde-la- <inde-la-@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 19:36:37 by inde-la-          #+#    #+#             */
-/*   Updated: 2023/06/07 13:08:32 by inde-la-         ###   ########.fr       */
+/*   Updated: 2023/06/07 13:14:20 by inde-la-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ char	*ft_strchr(const char *s, int c)
 		i++;
 	}
 	if (s[i] == (unsigned char)c)
-		return ((char *)(s));
+		return ((char *)(s + i));
 	return (NULL);
 }
