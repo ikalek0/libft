@@ -3,12 +3,13 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: inigo <inigo@student.42.fr>                +#+  +:+       +#+         #
+#    By: inde-la- <inde-la-@student.42urduliz.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/04/22 17:39:07 by inigo             #+#    #+#              #
-#    Updated: 2023/04/26 15:34:24 by inigo            ###   ########.fr        #
+#    Created: 2023/06/07 14:11:36 by inde-la-          #+#    #+#              #
+#    Updated: 2023/06/07 14:16:41 by inde-la-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 NAME	= libft.a
 
@@ -23,6 +24,7 @@ SRCS	= ft_isalpha.c \
 		  ft_strrchr.c \
 		  ft_strncmp.c \
 		  ft_memset.c \
+		  ft_strlcat.c 
 
 INC		= libft.h
 
