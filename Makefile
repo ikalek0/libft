@@ -6,7 +6,7 @@
 #    By: inde-la- <inde-la-@student.42urduliz.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/07 14:11:36 by inde-la-          #+#    #+#              #
-#    Updated: 2023/06/07 14:16:41 by inde-la-         ###   ########.fr        #
+#    Updated: 2023/06/07 17:26:01 by inde-la-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,11 @@ SRCS	= ft_isalpha.c \
 		  ft_strrchr.c \
 		  ft_strncmp.c \
 		  ft_memset.c \
-		  ft_strlcat.c 
+		  ft_strlcat.c \
+		  ft_bzero.c \
+		  ft_strnstr.c \
+		  ft_memcpy.c \
+		  ft_memmove
 
 INC		= libft.h
 
