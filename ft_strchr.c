@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inigo <inigo@student.42.fr>                +#+  +:+       +#+        */
+/*   By: inde-la- <inde-la-@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 19:36:37 by inde-la-          #+#    #+#             */
-/*   Updated: 2023/04/26 14:55:23 by inigo            ###   ########.fr       */
+/*   Updated: 2023/06/07 13:08:32 by inde-la-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] == (unsigned char)c)
 			return ((char *)(s + i));
 		i++;
 	}
-	if (s[i] == c)
-		return ((char *)(s + i));
-	return (0);
+	if (s[i] == (unsigned char)c)
+		return ((char *)(s));
+	return (NULL);
 }
