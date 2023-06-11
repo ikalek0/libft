@@ -6,14 +6,15 @@
 /*   By: inde-la- <inde-la-@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 17:25:14 by inde-la-          #+#    #+#             */
-/*   Updated: 2023/06/07 17:27:32 by inde-la-         ###   ########.fr       */
+/*   Updated: 2023/06/11 18:42:20 by inde-la-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/*#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	if (!dst && !src)
 		return (NULL);
 }
+*/

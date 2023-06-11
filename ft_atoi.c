@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: inde-la- <inde-la-@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/17 16:04:32 by inde-la-          #+#    #+#             */
-/*   Updated: 2023/06/11 18:39:56 by inde-la-         ###   ########.fr       */
+/*   Created: 2023/06/11 17:03:58 by inde-la-          #+#    #+#             */
+/*   Updated: 2023/06/11 18:44:09 by inde-la-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//NO ESTA ACABADO
-void	*ft_memset(void *b, int c, size_t len)
-{
-	size_t	i;
 
+int	ft_atoi(const char *str)
+{
+	int	num;
+	int	i;
+	int	sign;
+
+	num = 0;
 	i = 0;
-	while (i < len)
-	{	
-		((unsigned char *)b)[i] = c;
+	sign = 1;
+	while ((str[i] >= '\t' && str[i] <= '\r') || str[i] == ' ')
+		i++;
+	if (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
+			sign = -1;
+		i++;
+	}	
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		num = num * 10 + str[i] - '0';
 		i++;
 	}
-	return (b);
+	return (num * sign);
 }

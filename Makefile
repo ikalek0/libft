@@ -6,7 +6,7 @@
 #    By: inde-la- <inde-la-@student.42urduliz.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/07 14:11:36 by inde-la-          #+#    #+#              #
-#    Updated: 2023/06/07 17:26:01 by inde-la-         ###   ########.fr        #
+#    Updated: 2023/06/11 18:13:05 by inde-la-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,13 +28,19 @@ SRCS	= ft_isalpha.c \
 		  ft_bzero.c \
 		  ft_strnstr.c \
 		  ft_memcpy.c \
-		  ft_memmove
+		  ft_memmove.c \
+		  ft_tolower.c \
+		  ft_toupper.c \
+		  ft_memchr.c \
+		  ft_memcmp.c \
+		  ft_atoi.c \
+		  ft_calloc.c
 
 INC		= libft.h
 
 OBJS	= $(SRCS:%.c=%.o)
 
-CC		= gcc
+CC		= cc
 
 FLAGS	= -Wall -Werror -Wextra
 
@@ -49,3 +55,7 @@ clean:
 
 fclean: clean
 		rm -f $(NAME)
+
+#.PHONY
+
+#re
