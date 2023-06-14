@@ -1,30 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: inigo <inigo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/07 17:25:14 by inde-la-          #+#    #+#             */
-/*   Updated: 2023/06/14 12:35:44 by inigo            ###   ########.fr       */
+/*   Created: 2023/06/14 12:49:51 by inigo             #+#    #+#             */
+/*   Updated: 2023/06/14 13:07:27 by inigo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if (!dst && !src)
+	char	*sub;
+	size_t	len2;
+	size_t	len3;
+
+	len3 = 0;
+	while (s[len3] != '\0')
+		len++;
+	if (!s)
 		return (NULL);
-	if (src > dst)
-		dst = ft_memcpy(dst, src, len);
+	if (len3 <= start || len3 == 0 || len == 0)
+		return (ft_strdup(""));
+	len2 = 0;
+	if (len3 - start > len)
+		len2 = len + 1;
 	else
-	{
-		while (len > 0)
-		{
-			((char *)dst)[len - 1] = ((char *)src)[len - 1];
-			len--;
-		}
-	}
-	return (dst);
+		len2 = len3 - start + 1;
+	sub = ft_calloc(len2, sizeof(char));
+	if (!sub)
+		return (NULL);
+	ft_strlcpy(sub, s + start, len2);
+	return (sub);
 }
