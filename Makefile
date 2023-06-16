@@ -6,7 +6,7 @@
 #    By: inde-la- <inde-la-@student.42urduliz.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/07 14:11:36 by inde-la-          #+#    #+#              #
-#    Updated: 2023/06/16 19:22:32 by inde-la-         ###   ########.fr        #
+#    Updated: 2023/06/16 19:25:06 by inde-la-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,8 @@ SRCS	= ft_isalpha.c \
 		  ft_striteri.c \
 		  ft_putchar_fd.c \
 		  ft_putstr_fd.c \
-		  ft_putnbr_fd.c
+		  ft_putnbr_fd.c \
+		  ft_putendl_fd.c
 
 BONUS	= ft_lstnew.c \
 		  ft_lstadd_front.c \
