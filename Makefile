@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: inigo <inigo@student.42.fr>                +#+  +:+       +#+         #
+#    By: inde-la- <inde-la-@student.42urduliz.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/07 14:11:36 by inde-la-          #+#    #+#              #
-#    Updated: 2023/06/14 15:28:09 by inigo            ###   ########.fr        #
+#    Updated: 2023/06/16 16:03:13 by inde-la-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,8 @@ SRCS	= ft_isalpha.c \
 		  ft_calloc.c \
 		  ft_strdup.c \
 		  ft_substr.c \
-		  ft_strjoin.c
+		  ft_strjoin.c \
+		  ft_strtrim.c
 
 INC		= libft.h
 
@@ -59,6 +60,6 @@ clean:
 fclean: clean
 		rm -f $(NAME)
 
-.PHONY: NAME SRCS INC OBJS CC FLAGS all clean fclean
+.PHONY: re all clean fclean
 
 re: clean all

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inigo <inigo@student.42.fr>                +#+  +:+       +#+        */
+/*   By: inde-la- <inde-la-@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 13:09:08 by inigo             #+#    #+#             */
-/*   Updated: 2023/06/14 15:26:18 by inigo            ###   ########.fr       */
+/*   Updated: 2023/06/16 14:11:17 by inde-la-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,16 @@ static size_t	ft_strlcpy2(char *dst, const char *src, size_t dstsize)
 	return (ft_strlen(src));
 }*/
 
+static size_t	slen(const char *s)
+{
+	size_t	len;
+
+	len = 0;
+	while (s[len] != '\0')
+		len++;
+	return (len);
+}
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*j;
@@ -81,6 +91,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	i2 = 0;
 	if (!s1 || !s2)
+		return (NULL);
+	j = (char *)malloc((slen(s1) + slen(s2) + 1) * (sizeof(char)));
+	if (!j)
 		return (NULL);
 	while (s1[i])
 	{
@@ -93,6 +106,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i++;
 		i2++;
 	}
+	j[i] = '\0';
 	return (j);
 }
 

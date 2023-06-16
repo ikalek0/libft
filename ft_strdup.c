@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inigo <inigo@student.42.fr>                +#+  +:+       +#+        */
+/*   By: inde-la- <inde-la-@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 18:48:14 by inde-la-          #+#    #+#             */
-/*   Updated: 2023/06/14 12:42:44 by inigo            ###   ########.fr       */
+/*   Updated: 2023/06/16 14:10:12 by inde-la-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,15 @@ char	*ft_strdup(const char *s1)
 	len = 0;
 	while (s1[len] != '\0')
 		len++;
-	s2 = (char *)malloc(len + 1);
+	s2 = (char *)malloc((len + 1) * (sizeof(char)));
 	if (!s2)
 		return (NULL);
 	while (i < len)
 	{
-		((unsigned char *)s2)[i] = ((unsigned char *)s1[i]);
+		((unsigned char *)s2)[i] = ((unsigned char *)s1)[i];
 		i++;
 	}
+	s2[len] = '\0';
 	return (s2);
 }
 
