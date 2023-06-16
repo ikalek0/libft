@@ -6,7 +6,7 @@
 /*   By: inde-la- <inde-la-@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 19:07:57 by inde-la-          #+#    #+#             */
-/*   Updated: 2023/06/16 19:09:45 by inde-la-         ###   ########.fr       */
+/*   Updated: 2023/06/16 19:27:19 by inde-la-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void	ft_putendl_fd(char *s, int fd)
 		write(fd, &s[i], 1);
 		i++;
 	}
-	write(fd, '\n', 1);
+	write(fd, "\n", 1);
 }
