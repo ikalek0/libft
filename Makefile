@@ -6,12 +6,25 @@
 #    By: inde-la- <inde-la-@student.42urduliz.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/07 14:11:36 by inde-la-          #+#    #+#              #
-#    Updated: 2023/06/16 19:25:06 by inde-la-         ###   ########.fr        #
+#    Updated: 2023/06/19 20:19:46 by inde-la-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+# COLORS
+
+WHITE = \033[0;37m
+RED = \033[0;31m
+GREEN = \033[0;32m
 
 NAME	= libft.a
+INC		= libft.h
+
+CC		= cc
+AR = ar
+ARFLAGS = crs
+FLAGS	= -Wall -Werror -Wextra
+RM = rm
+RMFLAG = -f
 
 SRCS	= ft_isalpha.c \
 		  ft_isdigit.c \
@@ -46,32 +59,35 @@ SRCS	= ft_isalpha.c \
 		  ft_putchar_fd.c \
 		  ft_putstr_fd.c \
 		  ft_putnbr_fd.c \
-		  ft_putendl_fd.c
+		  ft_putendl_fd.c \
 
-BONUS	= ft_lstnew.c \
-		  ft_lstadd_front.c \
+BONUS	= ft_lstnew_bonus.c \
+		  ft_lstadd_front_bonus.c \
 		  
+OBJS	= $(SRCS:.c=.o)
+OBJS_BONUS = $(SRC_BONUS: .c=.o)
 
-INC		= libft.h
+%.o: %.c $(INC)
+	$(CC) $(FLAGS) -c $< -o $@
 
-OBJS	= $(SRCS:%.c=%.o)
+$(NAME): $(OBJS)
+	   	$(AR) $(ARFLAGS) $(NAME) $(OBJS)	
+		@echo "$(GREEN)Files compiled!$(WHITE)"
 
-CC		= cc
-
-FLAGS	= -Wall -Werror -Wextra
-
-$(NAME):
-		$(CC) $(FLAGS) -c $(SRCS) -I $(INC)
-	   	ar rc $(NAME) $(OBJS)	
+bonus: $(OBJS_BONUS)
+	   	$(AR) $(ARFLAG) $(NAME) $(OBJS_BONUS)
+		@echo "$(GREEN)Bonus compiled!$(WHITE)"
 
 all:	$(NAME)
 
 clean:
-		rm -f $(OBJS)
+		$(RM) $(RMFLAG) $(OBJS) $(OBJS_BONUS)
+		@echo "Wait a minute...$(GREEN)Removed!$(WHITE)"
 
 fclean: clean
-		rm -f $(NAME)
+		$(RM) $(RMFLAG) $(NAME)
+		@echo "Wait a minute...$(GREEN)Removed!$(WHITE)"
+
+re: fclean all
 
 .PHONY: re all clean fclean
-
-re: clean all
