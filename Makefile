@@ -6,7 +6,7 @@
 #    By: inde-la- <inde-la-@student.42urduliz.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/07 14:11:36 by inde-la-          #+#    #+#              #
-#    Updated: 2023/06/19 20:19:46 by inde-la-         ###   ########.fr        #
+#    Updated: 2023/06/20 20:38:34 by inde-la-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,11 +22,12 @@ INC		= libft.h
 CC		= cc
 AR = ar
 ARFLAGS = crs
-FLAGS	= -Wall -Werror -Wextra
+CFLAGS	= -Wall -Werror -Wextra
 RM = rm
 RMFLAG = -f
 
-SRCS	= ft_isalpha.c \
+SRCS	= \
+		  ft_isalpha.c \
 		  ft_isdigit.c \
 		  ft_isalnum.c \
 		  ft_isascii.c \
@@ -61,32 +62,42 @@ SRCS	= ft_isalpha.c \
 		  ft_putnbr_fd.c \
 		  ft_putendl_fd.c \
 
-BONUS	= ft_lstnew_bonus.c \
-		  ft_lstadd_front_bonus.c \
+SRC_BONUS	= \
+				ft_lstnew_bonus.c \
+				ft_lstadd_front_bonus.c \
+		  		ft_lstsize_bonus.c \
+		 		ft_lstlast_bonus.c \
+				ft_lstadd_back_bonus.c \
+				ft_lstdelone_bonus.c \
+				ft_lstclear_bonus.c \
+				ft_lstiter_bonus.c \
+				ft_lstmap_bonus.c \
 		  
 OBJS	= $(SRCS:.c=.o)
-OBJS_BONUS = $(SRC_BONUS: .c=.o)
+OBJS_BONUS = $(SRC_BONUS:.c=.o)
 
 %.o: %.c $(INC)
-	$(CC) $(FLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-	   	$(AR) $(ARFLAGS) $(NAME) $(OBJS)	
+	   	@echo "$(GREEN)"
+		$(AR) $(ARFLAGS) $(NAME) $(OBJS)	
 		@echo "$(GREEN)Files compiled!$(WHITE)"
 
 bonus: $(OBJS_BONUS)
-	   	$(AR) $(ARFLAG) $(NAME) $(OBJS_BONUS)
+		@echo "$(GREEN)"
+		$(AR) $(ARFLAGS) $(NAME) $(OBJS_BONUS)
 		@echo "$(GREEN)Bonus compiled!$(WHITE)"
 
 all:	$(NAME)
 
 clean:
 		$(RM) $(RMFLAG) $(OBJS) $(OBJS_BONUS)
-		@echo "Wait a minute...$(GREEN)Removed!$(WHITE)"
+		@echo "Wait a minute...$(GREEN)cleaned!$(WHITE)"
 
 fclean: clean
 		$(RM) $(RMFLAG) $(NAME)
-		@echo "Wait a minute...$(GREEN)Removed!$(WHITE)"
+		@echo "And...$(GREEN)Removed!$(WHITE)"
 
 re: fclean all
 
